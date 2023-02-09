@@ -5,12 +5,10 @@
 </script>
 
 <div class="guides">
-	<ul>
-		<li><a href="/">guide 1</a></li>
-		<li><a href="/">guide 2</a></li>
+	<ul data-sveltekit-preload-data="hover">
 		{#each guides as g}
 			<li>
-				<a href="/">{g.title}</a>
+				<a href={`/guides/${g.id}`}>{g.title}</a>
 			</li>
 		{/each}
 	</ul>
